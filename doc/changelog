@@ -1,0 +1,563 @@
+pdf2djvu (0.7.20) UNRELEASED; urgency=low
+
+  * Don't use djvused for setting document outline.
+    It was too slow for very long documents.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=93
+  * Windows: correctly determine path to DjVuLibre binaries.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=85
+  * Windows: fix path splitting is East-Asian locales.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=100
+  * Windows: fix stdout redirection.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=101
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 28 Feb 2015 00:15:26 +0100
+
+pdf2djvu (0.7.19) unstable; urgency=low
+
+  * Fix build failure with Poppler ≥ 0.31.
+    Thanks to David Evans for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=99
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 06 Feb 2015 20:00:38 +0100
+
+pdf2djvu (0.7.18) unstable; urgency=low
+
+  * Make the xml2c script more portable.
+  * In C++11 mode, use “decltype” instead of “typeof”.
+  * Fix build failure with libc++ in C++98 mode.
+    Thanks to Angelo Graziosi for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=88
+  * Use the standard AC_OPENMP macro in the configure script (instead of
+    3rd-party AX_OPENMP).
+  * Use HTTPS URLs when they are available, in documentation and code.
+  * Add Portuguese translation by Américo Monteiro.
+    https://bugs.debian.org/758262
+  * Add French translation of the manual page by Majid Redouane and 
+    Jean-Paul Guillonneau.
+  * Fix capitalization error in the German manual page.
+    Thanks to Chris Leick for help.
+  * Drop support for Poppler < 0.11.1.
+  * Improve error handling.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Thu, 18 Dec 2014 13:25:10 +0100
+
+pdf2djvu (0.7.17) unstable; urgency=low
+
+  * Fix build failure with Poppler ≥ 0.23.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Thu, 30 May 2013 22:20:31 +0200
+
+pdf2djvu (0.7.16) unstable; urgency=low
+
+  * Fix build failure with Poppler ≥ 0.21.1.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Wed, 14 Nov 2012 20:44:57 +0100
+
+pdf2djvu (0.7.15) unstable; urgency=low
+
+  * Fix build failure with Poppler ≥ 0.21.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 06 Oct 2012 12:32:09 +0200
+
+pdf2djvu (0.7.14) unstable; urgency=low
+
+  * Ignore links with no action. (Previously such links would cause segfault).
+    Thanks to Krzysztof Szafran for the bug report.
+  * Update German translation. Thanks to Chris Leick.
+  * Update Russian translation. Thanks to Kyrill Detinov.
+  * Update Ukrainian translation. Thanks to Serhij Dubyk.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Tue, 18 Sep 2012 17:27:28 +0200
+
+pdf2djvu (0.7.13) unstable; urgency=low
+
+  * XMP: put ‘softwareAgent’ and ‘when’ attributes in stEvt namespace.
+  * Rewrite test-suite runner from scratch, using nosetests.
+  * Windows: trap errors from external commands. Thanks to Andres Aule for the
+    bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=65
+  * Fix build failure with Poppler ≥ 0.19. Thanks to Kyrill Detinov for the
+    bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=66
+  * Update Russian translation. Thanks to Kyrill Detinov.
+  * Update Ukrainian translation. Thanks to Serhij Dubyk.
+  * Add Ukrainian translation of the manual page by Serhij Dubyk.
+  * Update German translation. Thanks to Chris Leick.
+    https://bugs.debian.org/675573
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sun, 03 Jun 2012 22:04:29 +0200
+
+pdf2djvu (0.7.12) unstable; urgency=low
+
+  * Fix resolution detection.
+  * Add Ukrainian translation by Serhij Dubyk.
+  * Windows: honour console output encoding.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=64
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sun, 22 Jan 2012 00:16:38 +0100
+
+pdf2djvu (0.7.11) unstable; urgency=low
+
+  * Fix build failure with Poppler ≥ 0.17. Thanks to Vincent Untz for the bug
+    report and the patch.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=61
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Thu, 06 Oct 2011 10:40:39 +0200
+
+pdf2djvu (0.7.10) unstable; urgency=low
+
+  * Fix the --monochrome option.
+    Thanks to Rogério Brito for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=59
+  * Fix crash with --no-metadata.
+  * Allow one to easily skip running some tests. Move tests requiring
+    GraphicsMagick into separate files.
+    Thanks to Kyrill Detinov for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=55
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 20 Aug 2011 20:52:59 +0200
+
+pdf2djvu (0.7.9) unstable; urgency=low
+
+  * Add Russian translation by Kyrill Detinov.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Thu, 18 Aug 2011 20:44:29 +0200
+
+pdf2djvu (0.7.8) unstable; urgency=low
+
+  * Add German translation by Chris Leick.
+    Thanks also to Arno Töll for a translation update.
+    https://bugs.debian.org/626315
+  * Add support for merging multiple PDFs into a single DjVu file.
+    https://bugs.debian.org/633628
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sun, 24 Jul 2011 22:41:20 +0200
+
+pdf2djvu (0.7.7) unstable; urgency=low
+
+  * Don't let the configure script look for windres if winver.h is not
+    available. Thanks to Andrew Isakov for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=57
+  * Fix build failure with GCC 4.6.
+  * Make it possible to control how work is distributed between threads with
+    the OMP_SCHEDULE variable.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Tue, 29 Mar 2011 18:21:22 +0200
+
+pdf2djvu (0.7.6) unstable; urgency=low
+
+  * Improve Windows font support.
+    + Compile libxml2 with --with-sax1, which is needed by fontconfig.
+    + Ship more complete configuration for fontconfig.
+    + Ship substitutes for all 35 standard PostScript fonts.
+  * Tests: output error log if a test failed.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 18 Feb 2011 13:00:59 +0100
+
+pdf2djvu (0.7.5) unstable; urgency=low
+
+  * Don't allow page identifiers start with a ‘+’ or ‘-’ characters.
+  * Document the use of TMPDIR environment variable.
+  * Windows: fix handling of non-ASCII filenames in CJK locales. Thanks to Lu
+    Wei for the bugreport.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=53
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Wed, 19 Jan 2011 23:56:19 +0100
+
+pdf2djvu (0.7.4) unstable; urgency=low
+
+  * Fix handling of the --pages option.
+    Thanks to Kyrill Detinov for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=50
+  * Fix build failure with GCC 4.2.
+    Thanks to Robert Baruch for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=51
+  * Make messages about missing features a bit more informative.
+    Thanks to François Boulogne for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=52
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 12 Jun 2010 22:20:10 +0200
+
+pdf2djvu (0.7.3) unstable; urgency=low
+
+  * Add a few const annotation to fix build failure with Poppler ≥ 0.13.
+    Thanks to Rakesh Pandit for the bug report and the patch.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=48
+  * Fix handling of the --indirect option.
+    Thanks to T S Mohan for the bugreport.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=49
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Mon, 24 May 2010 19:59:43 +0200
+
+pdf2djvu (0.7.2) unstable; urgency=low
+
+  * Add the --fg-colors=black option.
+  * Fix broken output with --fg-colors=web.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=45
+  * Fix crash with GraphicMagick ≥ 1.3.8.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=47
+    http://sourceforge.net/mailarchive/message.php?msg_id=24439342
+  * Override number of threads set by GraphicsMagick.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 01 May 2010 23:52:23 +0200
+
+pdf2djvu (0.7.1) unstable; urgency=low
+
+  * Speed up converting pages for which no foreground were detected.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Mon, 19 Apr 2010 20:50:47 +0200
+
+pdf2djvu (0.7.0) unstable; urgency=low
+
+  * Add support for parallel page rendering: options -j/--jobs.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 27 Feb 2010 23:32:21 +0100
+
+pdf2djvu (0.6.2) unstable; urgency=low
+
+  * Fix build failure without PStreams.
+    Thanks to Kyrill Detinov for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=43
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 15 Jan 2010 19:00:44 +0100
+
+pdf2djvu (0.6.1) unstable; urgency=low
+
+  * Add the --text-filter option.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Thu, 14 Jan 2010 22:57:46 +0100
+
+pdf2djvu (0.6.0) unstable; urgency=low
+
+  * New regression tests.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=27
+  * Add support for correcting XMP metadata.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=12
+  * Fix resolution detection (Poppler ≥ 0.11.1 only).
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Thu, 01 Oct 2009 18:30:33 +0200
+
+pdf2djvu (0.5.11) unstable; urgency=low
+
+  * Document how to deal with CJK PDFs.
+  * Windows: make it feasible to use poppler-data.
+  * Add support for Poppler ≥ 0.11.1.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=40
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 31 Jul 2009 17:07:07 +0200
+
+pdf2djvu (0.5.10) unstable; urgency=low
+
+  * Add Polish translation of the manual page.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sun, 12 Jul 2009 12:58:27 +0200
+
+pdf2djvu (0.5.9) unstable; urgency=low
+
+  * Add Polish translation by Mateusz Turcza.
+  * Respect LC_NUMERIC locale settings.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Thu, 18 Jun 2009 23:20:32 +0200
+
+pdf2djvu (0.5.8) unstable; urgency=low
+
+  * Fix some rounding bugs.
+  * Windows: fix fontconfig configuration and install URW fonts.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=39
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sun, 17 May 2009 10:11:53 +0200
+
+pdf2djvu (0.5.7) unstable; urgency=low
+
+  * Add the --guess-dpi option.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=11
+  * Windows: fix file handle leak.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 08 May 2009 15:07:20 +0200
+
+pdf2djvu (0.5.6) unstable; urgency=low
+
+  * New default quantization algorithm.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=36
+    https://code.google.com/p/pdf2djvu/issues/detail?id=42
+  * Fix some character encoding issues.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=37
+  * Stricter requirements for pageid names.
+  * Lift a limitation on number of pages in a bundled multi-page document.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=38
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Tue, 05 May 2009 18:31:26 +0200
+
+pdf2djvu (0.5.5) unstable; urgency=low
+
+  * Add the --pageid-template option.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=13
+  * Add the --page-title-template option.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=13
+  * Don't allow duplicate page identifies nor duplicate page titles.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=23
+  * More robust UTF-16 to UTF-8 conversion.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 25 Apr 2009 22:33:44 +0200
+
+pdf2djvu (0.5.4) unstable; urgency=low
+
+  * Add the --crop-text option.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=20
+  * Add support for Windows 9x.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 18 Apr 2009 21:36:38 +0200
+
+pdf2djvu (0.5.3) unstable; urgency=low
+
+  * Don't die with an error while trying to add empty outline to an indirect
+    multi-page document.
+  * Work around DjVuLibre performance bug with adding shared annotations to
+    indirect multi-page documents.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=19
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 28 Mar 2009 21:30:10 +0100
+
+pdf2djvu (0.5.2) unstable; urgency=low
+
+  * Add --verbatim-metadata option.
+  * Improve support for Windows systems.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=15
+    https://code.google.com/p/pdf2djvu/issues/detail?id=16
+    https://code.google.com/p/pdf2djvu/issues/detail?id=18
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 21 Mar 2009 16:28:18 +0100
+
+pdf2djvu (0.5.1) unstable; urgency=low
+
+  * Fix several memory leaks.
+  * On Unix systems, respect the TMPDIR variable.
+  * Improve support for Windows systems.
+  * Document differences between pdf2djvu and djvudigital.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=14
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Mon, 16 Mar 2009 20:26:58 +0100
+
+pdf2djvu (0.5.0) unstable; urgency=low
+
+  * Drop support for Poppler < 0.7.3.
+  * Allow compiling with MinGW.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sun, 28 Dec 2008 16:24:08 +0100
+
+pdf2djvu (0.4.13) unstable; urgency=low
+
+  * Add --monochrome, --lossy, --loss-level options.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Wed, 08 Oct 2008 13:54:55 +0200
+
+pdf2djvu (0.4.12) unstable; urgency=low
+
+  * Convert document outline if it is existent but empty.
+    Thanks to Chris Karakas for the bug report.
+  * Hyperlinks without borders no longer cause segmentation faults
+    (Poppler ≥ 0.7 only).
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Mon, 28 Jul 2008 14:13:15 +0200
+
+pdf2djvu (0.4.11) unstable; urgency=low
+
+  * Find text position more accurately (Poppler ≥ 0.6 only).
+    That should partially fix an issue with rotated text, too.
+  * Work around an issue with subsampled image resolution.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 20 Jun 2008 12:33:53 +0200
+
+pdf2djvu (0.4.10) unstable; urgency=low
+
+  * Ensure that each character height is ≥ 1 pixel.
+    Thanks to John Goerzen for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=5
+  * Handle rotated PDF pages properly.
+    Thanks to John Goerzen for the bug report.
+    https://code.google.com/p/pdf2djvu/issues/detail?id=4
+  * Extract hyperlinks border colors (Poppler ≥ 0.7 only).
+    https://code.google.com/p/pdf2djvu/issues/detail?id=3
+  * Make page references in the form "#<page-id>", instead of "#<page-no>".
+  * Fix a regression which disabled the --fg-colors option.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 02 May 2008 18:36:02 +0200
+
+pdf2djvu (0.4.9) unstable; urgency=low
+
+  * Perform NFKC normalization on hidden text.
+  * Fix a bug which was (sometimes) breaking index files for multi-page
+    indirect documents.
+  * Fix version information.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 18 Apr 2008 20:04:17 +0200
+
+pdf2djvu (0.4.8) unstable; urgency=low
+
+  * From now on, --indirect argument means an index file name.
+  * Add --pageid-prefix option.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sun, 13 Apr 2008 20:21:21 +0200
+
+pdf2djvu (0.4.7) unstable; urgency=low
+
+  * Add the --media-box option.
+  * Disable vector anti-aliasing by default.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Wed, 09 Apr 2008 16:46:37 +0200
+
+pdf2djvu (0.4.6) unstable; urgency=low
+
+  * Don't force red hyperlink border if it's unable to determine proper
+    colour.
+  * Enable compilation on Cygwin.
+  * Add the --fg-colors option.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sun, 30 Mar 2008 21:06:03 +0200
+
+pdf2djvu (0.4.5.1) unstable; urgency=low
+
+  * Fix version information.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Mon, 03 Mar 2008 23:48:30 +0100
+
+pdf2djvu (0.4.5) unstable; urgency=low
+
+  * Fix a bug which was (sometimes) breaking index files for multi-page
+    indirect documents.
+    Thanks to Krzysztof Szafran for the bug report.
+  * pdf2djvu version information is now recorded into metadata.
+  * Add the --version option.
+  * Add the --page-size option.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Thu, 07 Feb 2008 20:43:54 +0100
+
+pdf2djvu (0.4.4) unstable; urgency=low
+
+  * Fix an undefined behaviour which led to rendering bugs.
+    Thanks to Janusz S. Bień and Krzysztof Szafran for bug reports.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Tue, 05 Feb 2008 23:13:23 +0100
+
+pdf2djvu (0.4.3) unstable; urgency=low
+
+  * Fix some linking issues.
+  * Add the --hyperlinks option.
+  * Display compression ratio, file sizes etc.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 26 Jan 2008 13:00:32 +0100
+
+pdf2djvu (0.4.2) unstable; urgency=low
+
+  * Split code into several files.
+  * Don't write binary garbage to a terminal.
+  * Don't hang if a DjVuLibre binary tool is not found.
+    Thanks to Janusz S. Bień for the bug report.
+  * Fix an off-by-one error which caused (sometimes) erroneous text
+    conversion.
+    Thanks to Janusz S. Bień and Fadi Edward for bug reports.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Thu, 17 Jan 2008 23:28:49 +0100
+
+pdf2djvu (0.4.1) unstable; urgency=low
+
+  * Add --bg-subsample option.
+  * Work around djvused bug which made impossible to incorporate document
+    outline into indirect multi-page documents.
+    Thanks to Janusz S. Bień for the bug report.
+  * Tune color quantization a bit.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 28 Dec 2007 22:25:51 +0100
+
+pdf2djvu (0.4.0) unstable; urgency=low
+
+  * Add support for indirect multi-page documents.
+  * Don't crash on broken annotations.
+  * Ensure that each character width is ≥ 1 pixel.
+    Thanks to Victor Ivrii and Christian Ohm for bug reports.
+  * Do process I/O with pstreams, rather than with system(3) calls.
+  * More verbose error messages while option processing.
+  * Include ")" and "\" in the text layer.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Wed, 12 Dec 2007 20:40:02 +0100
+
+pdf2djvu (0.3.6) unstable; urgency=low
+
+  * Fix a bug which caused (sometimes) foreground colors to be discarded.
+  * Proper support for non-white background.
+  * Fix a file descriptior leak.
+    Thanks to Victor Ivrii for the report.
+  * Fix a regression with locating hyperlinks.
+  * Fix hyperlinks extraction (Poppler 0.6 only).
+    Thanks to Victor Ivrii for the report.
+  * Find text position more accurately (Poppler 0.6 only).
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 07 Dec 2007 21:28:32 +0100
+
+pdf2djvu (0.3.5) unstable; urgency=low
+
+  * Fix a regression with rendering background layer (Poppler 0.4 only).
+  * Improve bitonal image recognition.
+  * Coordinate space transformations are now done correctly.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Wed, 28 Nov 2007 16:13:57 +0100
+
+pdf2djvu (0.3.4) unstable; urgency=low
+
+  * Turn bookmark errors into warnings.
+  * Add --no-metadata, --no-outline, --no-hyperlinks options.
+  * Fix erroneous color conversion (Poppler 0.4 only).
+  * Recognize more link actions.
+  * Provide the manual page.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 23 Nov 2007 13:23:18 +0100
+
+pdf2djvu (0.3.3) unstable; urgency=low
+
+  * Find text position more accurately.
+  * Handle UTF-16-encoded strings properly.
+  * Parse dates with respect to PDF Reference.
+  * Add --words, --lines, --no-text options.
+  * Add -v/--verbose, -q/--quiet options.
+  * Don't synchronize C++ I/O streams with C stdio.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sat, 17 Nov 2007 11:56:25 +0100
+
+pdf2djvu (0.3.2) unstable; urgency=low
+
+  * Fix a regression which caused hyperlinks not be included into PDF
+    documents.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Sun, 11 Nov 2007 18:07:35 +0100
+
+pdf2djvu (0.3.1) unstable; urgency=low
+
+  * Legible file identifiers.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 09 Nov 2007 21:59:50 +0100
+
+pdf2djvu (0.3) unstable; urgency=low
+
+  * Recognize bilevel images as foreground.
+  * Recognize simple graphics as foreground.
+  * Fix mishandling of color documents.
+  * Fix mishandling of Type3 characters.
+  * Fix some other minor bugs.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Fri, 09 Nov 2007 21:59:42 +0100
+
+pdf2djvu (0.2) unstable; urgency=low
+
+  * Include hyperlinks to a particular page.
+  * Include outline/bookmarks.
+  * Add compatibility layer to allow linking with Poppler < 0.5.
+  * Improve exception handling.
+  * Fix some other minor bugs.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Tue, 30 Oct 2007 21:36:53 +0100
+
+pdf2djvu (0.1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Jakub Wilk <jwilk@jwilk.net>  Mon, 22 Oct 2007 19:25:12 +0200

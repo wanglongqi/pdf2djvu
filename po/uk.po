@@ -1,0 +1,543 @@
+# Copyright © 2012 Serhij Dubyk
+#
+# This file is distributed under the same license as the pdf2djvu package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pdf2djvu 0.7.20\n"
+"Report-Msgid-Bugs-To: https://code.google.com/p/pdf2djvu/issues/\n"
+"POT-Creation-Date: 2015-02-18 15:00+0100\n"
+"PO-Revision-Date: 2012-09-18 11:33+0300\n"
+"Last-Translator: Serhij Dubyk / Сергій Дубик <dubyk@library.lviv.ua>\n"
+"Language-Team: Ukrainian Linux Team <translation@linux.org.ua>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "     --filter-text=COMMAND-LINE"
+msgstr "     --filter-text=КОМАНДНИЙ_РЯДОК"
+
+msgid "     --page-size=WxH"
+msgstr "     --page-size=ШИР×ВИС"
+
+msgid "     --page-title-template=TEMPLATE"
+msgstr "     --page-title-template=ШАБЛОН"
+
+msgid "     --pageid-prefix=NAME"
+msgstr "     --pageid-prefix=НАЗВА"
+
+msgid "     --pageid-template=TEMPLATE"
+msgstr "     --pageid-template=ШАБЛОН"
+
+msgid "   pdf2djvu  -i <index-djvu-file>   [options] <pdf-file>"
+msgstr "   pdf2djvu  -i <файл_djvu-індексу>       [параметри] <pdf-файл>"
+
+msgid "   pdf2djvu [-o <output-djvu-file>] [options] <pdf-file>"
+msgstr "   pdf2djvu [-o <результуючий_djvu-файл>] [параметри] <pdf-файл>"
+
+msgid " -d, --dpi=RESOLUTION"
+msgstr " -d, --dpi=РОЗДІЛЬНА_ЗДАТНІСТЬ"
+
+msgid " -i, --indirect=FILE"
+msgstr " -i, --indirect=ФАЙЛ"
+
+msgid " -o, --output=FILE"
+msgstr " -o, --output=ФАЙЛ"
+
+#, c-format
+msgid "%.3f bits/pixel; %.3f:1, %.2f%% saved, %ju bytes in, %zu bytes out"
+msgstr "%.3f біт/піксель; %.3f:1, %.2f%% збережено, %ju байт початково, %zu байт в результаті"
+
+#. L10N: "<error-category> (<position>): <error-message>"
+#, c-format
+msgid "%s (%jd): %s"
+msgstr "%s (%jd): %s"
+
+#, c-format
+msgid "%s is not a valid number"
+msgstr "%s не є правильним числом"
+
+#. L10N: "<error-category>: <error-message>"
+#, c-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#, c-format
+msgid "%zu bytes out"
+msgid_plural "%zu bytes out"
+msgstr[0] "%zu байт в результаті"
+msgstr[1] "%zu байти в результаті"
+msgstr[2] "%zu байтів в результаті"
+
+#. L10N: Windows error message for E2BIG
+msgid "Arg list too long"
+msgstr "Занадто довгий список аргументів"
+
+#. L10N: Windows error message for E2BIG
+msgid "Argument list too long"
+msgstr "Занадто довгий список аргументів"
+
+#. L10N: Windows error message for EFAULT
+msgid "Bad address"
+msgstr "Неправильна адреса"
+
+#. L10N: Windows error message for EBADF
+msgid "Bad file descriptor"
+msgstr "Неправильний дескриптор файлу"
+
+#. L10N: Windows error message for EPIPE
+msgid "Broken pipe"
+msgstr "Обрив каналу"
+
+#. L10N: Windows error message for ENOMEM
+msgid "Cannot allocate memory"
+msgstr "Неможливо виділити пам’ять"
+
+msgid "Cannot find link destination"
+msgstr "Призначення посилання не знайдено"
+
+#. L10N: Windows error message for EBUSY
+msgid "Device or resource busy"
+msgstr "Пристрій чи ресурс зайнято"
+
+#. L10N: Windows error message for ENOTEMPTY
+msgid "Directory not empty"
+msgstr "Тека не порожня"
+
+msgid "Document outline too large"
+msgstr ""
+
+#. L10N: Windows error message for EDOM
+msgid "Domain error"
+msgstr "Помилка області визначення"
+
+#, c-format
+msgid "Duplicate page identifier: %s"
+msgstr "Повторний ідентифікатор сторінки: %s"
+
+#, c-format
+msgid "Duplicate page title: %s"
+msgstr "Повторний заголовок сторінки: %s"
+
+#. L10N: Windows error message for ENOEXEC
+msgid "Exec format error"
+msgstr "Неправильний формат виконуваного файлу"
+
+#, c-format
+msgid "External command \"%s ...\" failed"
+msgstr "Не вдалося виконати зовнішню команду „%s …“"
+
+#, c-format
+msgid "External command \"%s ...\" failed with exit code %u"
+msgstr "Не вдалося виконати зовнішню команду „%s …“. Код виходу %u"
+
+#, c-format
+msgid "External command \"%s\" failed"
+msgstr "Не вдалося виконати зовнішню команду „%s“"
+
+#, c-format
+msgid "External command \"%s\" failed with exit code %u"
+msgstr "Не вдалося виконати зовнішню команду „%s“. Код виходу %u"
+
+#. L10N: Windows error message for EEXIST
+msgid "File exists"
+msgstr "Файл існує"
+
+#. L10N: Windows error message for ENAMETOOLONG
+msgid "File name too long"
+msgstr "Надто довге ім’я файлу"
+
+#. L10N: Windows error message for EFBIG
+msgid "File too large"
+msgstr "Файл занадто великий"
+
+#. L10N: Windows error message for ENAMETOOLONG
+msgid "Filename too long"
+msgstr "Надто довге ім’я файлу"
+
+#. L10N: Windows error message for ENOSYS
+msgid "Function not implemented"
+msgstr "Функція не реалізована"
+
+msgid "I won't write DjVu data to a terminal."
+msgstr "Я не буду писати DjVu в термінал."
+
+#, c-format
+msgid "I/O error (%s)"
+msgstr "Помилка вводу/виводу (%s)"
+
+#. L10N: Windows error message for EILSEQ
+msgid "Illegal byte sequence"
+msgstr "Невірна послідовність байтів"
+
+#. L10N: Windows error message for ESEEK
+msgid "Illegal seek"
+msgstr "Неправильна операція зміщення"
+
+#. L10N: Windows error message for EXDEV
+msgid "Improper link"
+msgstr "Помилкове посилання"
+
+#. L10N: Windows error message for ENOTTY
+msgid "Inappropriate I/O control operation"
+msgstr "Невідповідна операція введення/виводу"
+
+#. L10N: Windows error message for ENOTTY
+msgid "Inappropriate ioctl for device"
+msgstr "Непридатний ioctl для пристрою"
+
+#. L10N: Windows error message for EIO
+msgid "Input/output error"
+msgstr "Помилка вводу/виводу"
+
+msgid "Integer overflow"
+msgstr "Цілочисельне переповнювання"
+
+msgid "Internal Poppler error"
+msgstr "Внутрішня помилка Poppler"
+
+#. L10N: Windows error message for EINTR
+msgid "Interrupted function call"
+msgstr "Перерваний виклик функції"
+
+#. L10N: Windows error message for EINTR
+msgid "Interrupted system call"
+msgstr "Перерваний системний виклик"
+
+#. L10N: Windows error message for EINVAL
+msgid "Invalid argument"
+msgstr "Неправильний аргумент"
+
+#. L10N: Windows error message for EXDEV
+msgid "Invalid cross-device link"
+msgstr "Невірне посилання між пристроями"
+
+msgid "Invalid date format"
+msgstr "Невірний формат дати"
+
+#. L10N: Windows error message for EILSEQ
+msgid "Invalid or incomplete multibyte or wide character"
+msgstr "Неправильний або неповний багатобайтний символ"
+
+msgid "Invalid output file name"
+msgstr "Неправильне ім’я вихідного файлу"
+
+#. L10N: Windows error message for ESEEK
+msgid "Invalid seek"
+msgstr "Неправильна операція зміщення"
+
+#. L10N: Windows error message for EISDIR
+msgid "Is a directory"
+msgstr "Це тека"
+
+#. L10N: Windows error message for ECHILD
+msgid "No child processes"
+msgstr "Немає дочірніх процесів"
+
+msgid "No input file name was specified"
+msgstr "Не вказано назву вхідного файлу"
+
+#. L10N: Windows error message for ENOLOCK
+msgid "No locks available"
+msgstr "Немає доступних блокувань"
+
+msgid "No page for a bookmark"
+msgstr "Немає сторінки для закладки"
+
+msgid "No pages selected"
+msgstr "Не вибрані сторінки"
+
+#. L10N: Windows error message for ENOSPC
+msgid "No space left on device"
+msgstr "На пристрої закінчилося місце"
+
+#. L10N: Windows error message for ENODEV
+msgid "No such device"
+msgstr "Немає такого пристрою"
+
+#. L10N: Windows error message for ENXIO
+msgid "No such device or address"
+msgstr "Немає такого пристрою чи адреси"
+
+#. L10N: Windows error message for ENOENT
+msgid "No such file or directory"
+msgstr "Немає такого файлу чи теки"
+
+#. L10N: Windows error message for ESRCH
+msgid "No such process"
+msgstr "Немає такого процесу"
+
+msgid "No title for a bookmark"
+msgstr "Немає назви для закладки"
+
+#. L10N: Windows error message for ENOTDIR
+msgid "Not a directory"
+msgstr "Не є текою"
+
+#. L10N: Windows error message for ENOMEM
+msgid "Not enough space"
+msgstr "Недостатньо місця"
+
+#. L10N: Windows error message for EDOM
+msgid "Numerical argument out of domain"
+msgstr "Числовий аргумент поза області визначення"
+
+#. L10N: Windows error message for ERANGE
+msgid "Numerical result out of range"
+msgstr "Числовий результат поза можливим діапазоном"
+
+#. L10N: Windows error message for EPERM
+msgid "Operation not permitted"
+msgstr "Дія не дозволена"
+
+msgid "Options: "
+msgstr "Параметри: "
+
+msgid "PDF error"
+msgstr "Помилка PDF"
+
+msgid "PDF feature not implemented"
+msgstr "Властивість PDF не реалізована"
+
+msgid "PDF syntax error"
+msgstr "Помилка синтаксису у PDF-файлі"
+
+msgid "PDF syntax warning"
+msgstr "Попередження про синтаксичну помилку у PDF-файлі"
+
+msgid "Page not found"
+msgstr "Сторінку не знайдено"
+
+msgid "Pageid cannot start with a '+' or a '-' character"
+msgstr "Ідентифікатор сторінки не може починатися зі знаків „+“ чи „-“"
+
+msgid "Pageid cannot start with a '.' character or contain two consecutive '.' characters"
+msgstr "Ідентифікатор сторінки не може починатися зі знаку „.“ або включати два послідовних знаки „.“"
+
+msgid "Pageid must consist only of letters, digits, '_', '+', '-' and '.' characters"
+msgstr "Ідентифікатор сторінки повинен включати лише букви, цифри та знаки „_“, „+“, „-“ та „.“ "
+
+msgid "Pageid must end with the '.djvu' or the '.djv' extension"
+msgstr "Ідентифікатор сторінки повинен мати розширення „*.djvu“ або „*.djv“"
+
+#. L10N: Windows error message for EACCES
+msgid "Permission denied"
+msgstr "Доступ заборонено"
+
+msgid "Poppler configuration error"
+msgstr "Помилка налаштування Poppler"
+
+#. L10N: Windows error message for EROFS
+msgid "Read-only file system"
+msgstr "Файлова система доступна лише для читання"
+
+#. L10N: Windows error message for EDEADLK
+msgid "Resource deadlock avoided"
+msgstr "Попереджено тупикову ситуацію при зверненні до ресурсу"
+
+#. L10N: Windows error message for EBUSY
+msgid "Resource device"
+msgstr "Пристрій або ресурс зайнято"
+
+#. L10N: Windows error message for EAGAIN
+msgid "Resource temporarily unavailable"
+msgstr "Ресурс тимчасово недоступний"
+
+#. L10N: Windows error message for ERANGE
+msgid "Result too large"
+msgstr "Результат занадто великий"
+
+#, c-format
+msgid "The specified number of foreground colors is outside the allowed range: %u .. %u"
+msgstr "Зазначена кількість кольорів переднього плану знаходиться поза межами дозволеного діапазону: %u .. %u"
+
+#, c-format
+msgid "The specified resolution is outside the allowed range: %d .. %d"
+msgstr "Зазначена роздільна здатність знаходиться поза межами дозволеного діапазону: %d .. %d"
+
+#, c-format
+msgid "The specified subsampling ratio is outside the allowed range: %u .. %u"
+msgstr "Задане співвідношення підвибірки знаходиться поза межами дозволеного діапазону: %u .. %u"
+
+#. L10N: Windows error message for EMLINK
+msgid "Too many links"
+msgstr "Надто багато посилань"
+
+#. L10N: Windows error message for EMFILE
+msgid "Too many open files"
+msgstr "Надто багато відкритих файлів"
+
+#. L10N: Windows error message for ENFILE
+msgid "Too many open files in system"
+msgstr "Надто багато відкритих файлів у системі"
+
+msgid "Unable to load document"
+msgstr "Неможливо завантажити документ"
+
+msgid "Unable to parse command-line options"
+msgstr "Неможливо розібрати параметри командного рядка"
+
+msgid "Unable to parse hyperlinks options"
+msgstr "Неможливо розібрати параметри посилань"
+
+msgid "Unable to parse page numbers"
+msgstr "Неможливо розібрати номери сторінок"
+
+msgid "Unable to parse page size"
+msgstr "Неможливо розібрати розмір сторінки"
+
+msgid "Unable to parse page title template specification"
+msgstr "Неможливо розібрати специфікацію шаблону назви сторінки"
+
+msgid "Unable to parse pageid template specification"
+msgstr "Неможливо розібрати специфікацію шаблону ідентифікатора сторінки"
+
+msgid "Unable to set antialias parameter"
+msgstr "Неможливо виставити параметри згладжування"
+
+msgid "Unable to set vector antialias parameter"
+msgstr "Неможливо виставити параметри векторного згладжування"
+
+msgid "Unexpected output from djvused"
+msgstr "Неочікуваний вивід з „djvused“"
+
+msgid "Unexpected subsampled bitmap height"
+msgstr "Неочікувана висота розділеного растрового зображення"
+
+msgid "Unexpected subsampled bitmap width"
+msgstr "Неочікувана ширина розділеного растрового зображення"
+
+msgid "Unknown error"
+msgstr "Невідома помилка"
+
+msgid "Unknown option"
+msgstr "Невідомий параметр"
+
+msgid "Usage: "
+msgstr "Використання: "
+
+#, c-format
+msgid "Warning: %s"
+msgstr "Попередження: %s"
+
+msgid "Warning: Unable to convert link with a named action"
+msgstr "Попередження: неможливо перетворити посилання з дією"
+
+msgid "Warning: Unable to convert link with a remote go-to action"
+msgstr "Попередження: неможливо перетворити посилання на зовнішній документ"
+
+msgid "Warning: Unable to convert link without an action"
+msgstr "Попередження: неможливо перетворити посилання без дії"
+
+msgid "Warning: Unknown link action"
+msgstr "Попередження: невідома дія посилання"
+
+#, c-format
+msgid "Warning: metadata[%s] is not a valid date"
+msgstr "Попередження: метадані[%s] є неприпустимою датою"
+
+msgid "adding non-raster data with `djvused`"
+msgstr "додавання нерастрових даних з „djvused“"
+
+#, c-format
+msgid "creating multi-page indirect document (%zu page)"
+msgid_plural "creating multi-page indirect document (%zu pages)"
+msgstr[0] "створення багатосторінкового роздільного документа (%zu сторінка)"
+msgstr[1] "створення багатосторінкового роздільного документа (%zu сторінки)"
+msgstr[2] "створення багатосторінкового роздільного документа (%zu сторінок)"
+
+msgid "creating new background image with `c44`"
+msgstr "створення нового фонового зображення з „c44“"
+
+msgid "encoding layers with `csepdjvu`"
+msgstr "кодування шарів з „csepdjvu“"
+
+msgid "encoding monochrome image with `cjb2`"
+msgstr "кодування монохромного зображення з „cjb2“"
+
+#, c-format
+msgid "estimated resolution: %d dpi"
+msgstr "очікувана роздільна здатність: %d dpi"
+
+msgid "extracting XMP metadata"
+msgstr "витягнення метаданих XMP"
+
+msgid "extracting annotations"
+msgstr "витягнення анотацій"
+
+msgid "extracting document outline"
+msgstr "витягнення змісту документа"
+
+msgid "extracting document-information metadata"
+msgstr "витягнення метаданих інформації документа"
+
+#, c-format
+msgid "guessed resolution: %s dpi"
+msgstr "передбачувана роздільна здатність: %s dpi"
+
+#, c-format
+msgid "image size: %dx%d"
+msgstr "розмір зображення: %d×%d"
+
+#, c-format
+msgid "page #%d -> #%d"
+msgstr "сторінка №%d ⇒ №%d"
+
+msgid "pdf2djvu is intended to be run from the command prompt."
+msgstr "pdf2djvu призначений для запуску з командного рядка."
+
+msgid "pdf2djvu was built without GNOME XSLT; XML transformations are disabled."
+msgstr "pdf2djvu скомпільований без GNOME XSLT; XML-перетворення відключені."
+
+msgid "pdf2djvu was built without GraphicsMagick; advanced color quantization is disabled."
+msgstr "Pdf2djvu скомпільований без GraphicsMagick; покращене квантування кольору відключено."
+
+msgid "pdf2djvu was built without OpenMP support; multi-threading is disabled."
+msgstr "Pdf2djvu скомпільований без підтримки OpenMP; багатопотоковість відключена."
+
+msgid "possibly memory allocation error"
+msgstr "ймовірно, помилка виділення пам’яті"
+
+msgid "preparing data for `csepdjvu`"
+msgstr "підготовка даних для „csepdjvu“"
+
+msgid "re-assembling page with `djvumake`"
+msgstr "перезбирання сторінки з „djvumake“"
+
+msgid "recovering image chunks with `djvuextract`"
+msgstr "відновлення шматків малюнка з „djvuextract“"
+
+msgid "recovering images with `djvuextract`"
+msgstr "відновлення малюнків з „djvuextract“"
+
+msgid "recovering text with `djvused`"
+msgstr "відновлення тексту з „djvused“"
+
+msgid "rendering background image"
+msgstr "промальовка фонового зображення"
+
+msgid "rendering page (1st pass)"
+msgstr "промальовка сторінки (1-ий прохід)"
+
+msgid "rendering page (2nd pass)"
+msgstr "промальовка сторінки (2-ий прохід)"
+
+msgid "setting metadata with `djvused`"
+msgstr "присвоєння метаданих з „djvused“"
+
+msgid "storing background image"
+msgstr "збереження фонового зображення"
+
+msgid "storing dummy background image"
+msgstr "збереження порожнього фонового зображення"
+
+msgid "storing foreground image"
+msgstr "збереження зображення переднього плану"
+
+msgid "storing text layer"
+msgstr "збереження текстового шару"
+
+msgid "unable to guess resolution"
+msgstr "неможливо оцінити роздільну здатність"

@@ -1,0 +1,32 @@
+% Copyright © 2009-2014 Jakub Wilk
+%
+% This package is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; version 2 dated June, 1991.
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\hoffset -1in
+\voffset -1in
+\parindent 0in
+
+\nopagenumbers
+
+\edef\0{\string\0}%
+\edef\1{\string\1}%
+\edef\2{\string\2}%
+\edef\3{\string\3}%
+
+\def\pdfpageimage#1{
+    \setbox0\hbox{\pdfximage{#1}\pdfrefximage\pdflastximage}%
+    \pdfpagewidth=\wd0
+    \pdfpageheight=\ht0
+    \shipout\box0
+}
+
+\pdfmapline{ptmr8r Times-Roman <8r.enc}
+\font\times=ptmr8r at 12pt
+\times
+
+% vim:ts=4 sts=4 sw=4 et

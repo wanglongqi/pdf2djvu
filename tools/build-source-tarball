@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# Copyright © 2009-2014 Jakub Wilk
+#
+# This package is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 2 dated June, 1991.
+
+set -e
+set -x
+
+pwd="$PWD"
+buildroot=$(mktemp -dt pdf2djvu-source-XXXXXXXX)
+export TAR_OPTIONS="--owner root --group root --mode a+rX --format ustar"
+export XZ_OPT='-6e'
+
+cd "$buildroot"
+
+# Mercurial archive:
+hg archive "$@" -R "$pwd" pdf2djvu
+rm -f pdf2djvu/.hg*
+version=$(sed -e '/.*(\([0-9.]\+\)).*/ { s//\1/g; q; }' < pdf2djvu/doc/changelog)
+mv pdf2djvu "pdf2djvu-$version"
+
+# Autoconf & company:
+cd "pdf2djvu-$version"
+tools/autogen
+rm -Rf *.cache
+cd ..
+
+# Build the manual page and translations:
+sed -n -e '/^AC_INIT(\[\([^]]*\)\], *\[\([^]]*\)\], *\[\([^]]*\)\],.*/ { s//PACKAGE_NAME=\1\nPACKAGE_VERSION=\2\nPACKAGE_BUGREPORT=\3/p; q }' \
+    "pdf2djvu-$version/configure.ac" \
+    > "pdf2djvu-$version/Makefile.common"
+grep -E 'MSGFMT|MSGMERGE|XGETTEXT' "pdf2djvu-$version/Makefile.common.in" \
+| sed >> "pdf2djvu-$version/Makefile.common" \
+    -e 's/@MSGFMT@/msgfmt/' \
+    -e 's/@MSGMERGE@/msgmerge/' \
+    -e 's/@XGETTEXT@/xgettext/'
+cat "pdf2djvu-$version/Makefile.common"
+make -C "pdf2djvu-$version/po/" 'quality-check=1'
+make -C "pdf2djvu-$version/doc/"
+make -C "pdf2djvu-$version/doc/po/" all pdf2djvu.pot 'quality-check=1'
+rm "pdf2djvu-$version/Makefile.common"
+
+# Prepare tests:
+make -C "pdf2djvu-$version/tests/" prepare
+
+# Tarball with raw source:
+tar -caf "$pwd/pdf2djvu-$version.tar.xz" "pdf2djvu-$version"
+
+# Cleanup:
+rm -Rf "$buildroot"
